@@ -1,21 +1,22 @@
 import numpy as np
 # elementwise comparison of 2 given arrays (>, >= , <, <=)
 
-x = np.array([1,2,3,4])
-y = np.array([3,2,1,4])
-for i in range(5):
-    if x[i]>y[i]:
-        print(x[i] , "is greater than" , y[i])
-    elif x[i] < y[i]:
-        print(x[i] , "is less than" , y[i])
-    else:
-        print(x[i] , "is equal to" , y[i])
-
-
+x = [3, 5,6]
+y = [2, 5,7]
+print("Original numbers:")
+print(x)
+print(y)
+print("Comparison - greater")
+print(np.greater(x, y))
+print("Comparison - greater_equal")
+print(np.greater_equal(x, y))
+print("Comparison - less")
+print(np.less(x, y))
+print("Comparison - less_equal")
+print(np.less_equal(x, y))
 
 
 # array of all even integers from 30 to 70
-
 evenArray = np.arange(30,50,2)
 print("Array\n",evenArray)
 
@@ -25,11 +26,7 @@ id = np.identity(3)
 
 
 # create a vector with values from 0 to 20 and change sign of numbers in the range from 9 to 15
-
-list = []
-for i in range(20):
-    list.append(i+1)
-a = np.array(list)
+a = np.arange(21)
 for i,x in enumerate(a):
     print(i)
     if x >=9 and x<=15:
